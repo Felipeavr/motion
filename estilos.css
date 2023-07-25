@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.platillo {
+  offset-path: path("M100,180 C100,180 140,30, 380,50 S500,50 660,100 S1000,150 1200,130 S1300,300 1600,150 S1890,200 1870,300 S1800,600 1700,650 S1600,700 1300,500 S1000,500 750,500 S500,900 300,800 S50,400 100,180");
+  /*offset-path: path("M10,100 C100,120 150,20 180,10 S200,180 450,70 S480,90 550,80 S580,120 530,200 S300,250 200,220 S200,300 10,220 z");*/
+  offset-rotate: 0deg;
+  width: calc(194px/5);
+  height: 20px;
+  position: absolute;
+  background: url('images/ovnispt2.png');
+  border: 0px solid white;
+  animation: ovnispt 3s steps(5) infinite, move 15s infinite linear;
+  rotate: 0;
+
+}
+
+@keyframes ovnispt {
+  from {
+    background-position: 194px;
+  }
+
+
+  to {
+    background-position: 0px;
+  }
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+
+#motion-demo {
+    offset-path: path("M100,180 C100,180 140,30, 380,50 S500,50 660,100 S1000,150 1200,130 S1300,300 1600,150 S1890,200 1870,300 S1800,600 1700,650 S1600,700 1300,500 S1000,500 750,500 S500,900 300,800 S50,400 100,180");
+    animation: move1 15s infinite linear;
+    animation-delay: 1s;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: cyan;
+  }
+  
+  @keyframes move1 {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+
+  #motion-demo1 {
+    offset-path: path("M100,180 C100,180 140,30, 380,50 S500,50 660,100 S1000,150 1200,130 S1300,300 1600,150 S1890,200 1870,300 S1800,600 1700,650 S1600,700 1300,500 S1000,500 750,500 S500,900 300,800 S50,400 100,180");
+    animation: move2 15s infinite linear;
+    animation-delay: 2s;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: rgb(26, 177, 6);
+  }
+  
+  @keyframes move2 {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+  #motion-demo3 {
+    offset-path: path("M100,180 C100,180 140,30, 380,50 S500,50 660,100 S1000,150 1200,130 S1300,300 1600,150 S1890,200 1870,300 S1800,600 1700,650 S1600,700 1300,500 S1000,500 750,500 S500,900 300,800 S50,400 100,180");
+    animation: move4 15s infinite linear;
+    animation-delay: 4s;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: rgb(209, 10, 183);
+  }
+  
+  @keyframes move4 {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+
+  #heart {
+    position: absolute;
+    offset-path: path("M100,180 C100,180 140,30, 380,50 S500,50 660,100 S1000,150 1200,130 S1300,300 1600,150 S1890,200 1870,300 S1800,600 1700,650 S1600,700 1300,500 S1000,500 750,500 S500,900 300,800 S50,400 100,180");
+    animation: move3 15s infinite linear;
+    animation-delay: 3s;
+    width: 20px;
+    height: 22.5px;
+    offset-rotate: 0;
+    offset-rotate: auto -90deg;
+    transform: scale(1.5);
+    
+  }
+
+  #heart:before,
+  #heart:after {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 0;
+    width:10px;
+    height: 15px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  #heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+ 
+  @keyframes move3 {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
